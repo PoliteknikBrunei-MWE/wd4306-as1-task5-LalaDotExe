@@ -26,4 +26,8 @@ export const routes: Routes = [
         (m) => m.PlaceDetailPage
       ),
   },
+  {
+    path: 'tabs',
+    loadComponent: () => import('./tabs/tabs.page').then( m => m.TabsPage)
+  },
 ];
