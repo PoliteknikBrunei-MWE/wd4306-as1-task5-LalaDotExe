@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { addIcons } from 'ionicons';
-import { map, search } from 'ionicons/icons';
+import { map, pricetags } from 'ionicons/icons';
 
 @Component({
   selector: 'app-tabs',
@@ -14,7 +14,7 @@ import { map, search } from 'ionicons/icons';
 })
 export class TabsPage implements OnInit {
   constructor() {
-    addIcons({ map, search });
+    addIcons({ map, pricetags });
   }
 
   ngOnInit() {}
