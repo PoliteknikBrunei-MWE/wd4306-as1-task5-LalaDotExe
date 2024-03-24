@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { TabsPage } from './tabs/tabs.page';
 
 export const routes: Routes = [
   {
@@ -28,6 +29,26 @@ export const routes: Routes = [
   },
   {
     path: 'tabs',
-    loadComponent: () => import('./tabs/tabs.page').then( m => m.TabsPage)
+    loadComponent: () => import('./tabs/tabs.page').then((m) => m.TabsPage),
+  },
+  {
+    path: 'tabs',
+    component: TabsPage,
+    children: [
+      {
+        path: 'places',
+        loadChildren: () =>
+          import('./places/places.page').then((m) => m.PlacesPage),
+      },
+      {
+        path: 'offers',
+        loadChildren: () => import('./map/map.page').then((m) => m.Mappage),
+      },
+      {
+        path: '',
+        redirectTo: '/tabs/places',
+        pathMatch: 'full',
+      },
+    ],
   },
 ];
