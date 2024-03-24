@@ -14,4 +14,10 @@
       ></ion-img>
     </ion-card-content>
   </ion-card>
+
+  <ion-list>
+    <ion-item *ngFor="let place of places">
+      <ion-label>{{ place }}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
