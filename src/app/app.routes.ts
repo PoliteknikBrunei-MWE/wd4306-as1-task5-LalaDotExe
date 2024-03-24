@@ -43,7 +43,7 @@ export const routes: Routes = [
       {
         path: 'offers',
         loadChildren: () =>
-          import('./offers/offers.page').then((m) => m.Offerspage),
+          import('./offers/offers.page').then((m) => m.OffersPage),
       },
       {
         path: '',
