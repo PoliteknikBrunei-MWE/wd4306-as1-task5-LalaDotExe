@@ -42,7 +42,8 @@ export const routes: Routes = [
       },
       {
         path: 'offers',
-        loadChildren: () => import('./map/map.page').then((m) => m.Mappage),
+        loadChildren: () =>
+          import('./offers/offers.page').then((m) => m.Offerspage),
       },
       {
         path: '',
@@ -50,5 +51,10 @@ export const routes: Routes = [
         pathMatch: 'full',
       },
     ],
+  },
+  {
+    path: 'offers',
+    loadComponent: () =>
+      import('./offers/offers.page').then((m) => m.OffersPage),
   },
 ];
