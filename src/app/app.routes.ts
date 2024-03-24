@@ -34,20 +34,20 @@ export const routes: Routes = [
     children: [
       {
         path: 'places',
-        loadChildren: () =>
+        loadComponent: () =>
           import('./places/places.page').then((m) => m.PlacesPage),
       },
       {
         path: 'offers',
-        loadChildren: () =>
+        loadComponent: () =>
           import('./offers/offers.page').then((m) => m.OffersPage),
       },
-      {
-        path: 'places',
-        redirectTo: '/tabs/places',
-        pathMatch: 'full',
-      },
     ],
+  },
+  {
+    path: 'places',
+    redirectTo: '/tabs/places',
+    pathMatch: 'full',
   },
   {
     path: 'tabs',
